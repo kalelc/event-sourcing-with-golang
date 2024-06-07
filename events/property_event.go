@@ -8,13 +8,13 @@ type PropertyCreated struct {
 	PropertyTaxID string
 }
 
-func NewPropertyCreated(ID int64, propertyTaxID string) PropertyCreated {
+func NewPropertyCreated(id int64, propertyTaxID string) PropertyCreated {
 	return PropertyCreated{
 		BaseEvent: BaseEvent{
 			Type:     "PropertyCreated",
 			Occurred: time.Now(),
 		},
-		ID:            ID,
+		ID:            id,
 		PropertyTaxID: propertyTaxID,
 	}
 }
