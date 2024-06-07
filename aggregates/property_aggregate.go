@@ -24,7 +24,7 @@ func (p *Property) Apply(event events.Event) error {
 
 func (p *Property) CreateProperty(id int64, propertyTaxID string) ([]events.Event, error) {
 	if p.ID != 0 {
-		return nil, errors.New("user already exists")
+		return nil, errors.New("property already exists")
 	}
 	event := events.NewPropertyCreated(id, propertyTaxID)
 	err := p.Apply(event)
